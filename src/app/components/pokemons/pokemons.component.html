@@ -17,21 +17,21 @@
         Costas
       </td>
     </tr>
-    <tr *ngFor="let pokemon of pokemonList.results">
+    <tr *ngFor="let result of pokemonList.results">
       <td>
-        {{pokemon.name}}
+        <a [routerLink]="['/']" [queryParams]="{nome: result.name}">{{result.name}}</a>
       </td>
       <td>
-        {{pokemon.pokemon?.height}}
+        {{result.pokemon?.height}}
       </td>
       <td>
-        {{pokemon.pokemon?.weight}}
+        {{result.pokemon?.weight}}
       </td>
       <td>
-        <img [src]="pokemon.pokemon?.sprites?.front_default"><br>
+        <img [src]="result.pokemon?.sprites?.front_default"><br>
       </td>
       <td>
-        <img [src]="pokemon.pokemon?.sprites?.back_default"><br>
+        <img [src]="result.pokemon?.sprites?.back_default"><br>
       </td>
     </tr>
   </table>
