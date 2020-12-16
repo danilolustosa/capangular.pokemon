@@ -22,16 +22,16 @@
         {{pokemon.name}}
       </td>
       <td>
-        {{pokemon.pokemon.height}}
+        {{pokemon.pokemon?.height}}
       </td>
       <td>
-        {{pokemon.pokemon.weight}}
+        {{pokemon.pokemon?.weight}}
       </td>
       <td>
-        <img [src]="pokemon.pokemon.sprites?.front_default"><br>
+        <img [src]="pokemon.pokemon?.sprites?.front_default"><br>
       </td>
       <td>
-        <img [src]="pokemon.pokemon.sprites?.back_default"><br>
+        <img [src]="pokemon.pokemon?.sprites?.back_default"><br>
       </td>
     </tr>
   </table>
